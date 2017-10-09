@@ -33,12 +33,13 @@ module.exports = function(env) {
         title: 'video 24',
         filename: 'index.html',
         template: 'index.html'
-      }),
-      new UglifyJSPlugin()
+      })
     ]
   };
 
   if (env && env.s3) {
+    config.plugins.push(new UglifyJSPlugin());
+
     config.plugins.push(new S3Plugin({    
       // s3Options are required
       s3Options: {
