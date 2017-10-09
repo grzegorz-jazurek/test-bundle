@@ -1,4 +1,4 @@
-var userController = {
+export default {
     data: {
         auth0Lock: null,
         config: null

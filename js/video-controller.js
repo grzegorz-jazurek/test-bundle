@@ -1,4 +1,4 @@
-var videoController = {
+export default {
     data: {
         config: null
     },
@@ -70,7 +70,7 @@ var videoController = {
         //   storageBucket: "",
         // };
 
-        firebase.initializeApp(config);
+        firebase.initializeApp(this.data.config);
 
         var firebaseRef = firebase.database().ref();
 

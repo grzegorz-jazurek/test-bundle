@@ -1,4 +1,4 @@
-var uploadController = {
+export default {
     data: {
         config: null
     },
